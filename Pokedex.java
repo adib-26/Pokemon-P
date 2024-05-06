@@ -13,11 +13,14 @@ public class Pokedex {
         BufferedReader reader = null;
         String line = "";
         try{
-            reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
             int i=0;
+            final String UTF8_BOM = "\uFEFF";
 
             while((line = reader.readLine()) != null){
-                
+                if (line.startsWith(UTF8_BOM)){
+                    line = line.substring(1);
+                }
                 String[] row = line.split(",");
                 pokedex[i] = new Pokemon();
                 

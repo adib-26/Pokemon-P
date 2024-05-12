@@ -1,4 +1,4 @@
-package entity;
+package ElementalCreatures;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -9,19 +9,19 @@ package entity;
  *
  * @author User
  */
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-import lib.Moves;
-import lib.Evolution;
-import lib.LearnableMoves;
+import javax.swing.text.html.parser.Element;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
+import ElementalCreatures.Pokedex;
+import ElementalCreatures.Moves;
+import ElementalCreatures.Evolution;
 
 public class Pokemon {
     String name;

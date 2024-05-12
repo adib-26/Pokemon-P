@@ -1,6 +1,6 @@
-package lib;
-import java.util.LinkedList;
-import entity.*;
+package ElementalCreatures;
+
+
 public class Evolution {
     private Pokemon pokemon;
     private int evoType, cond;

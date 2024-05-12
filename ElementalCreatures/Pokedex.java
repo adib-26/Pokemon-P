@@ -1,13 +1,6 @@
-package main;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-import entity.Pokemon;
-import lib.Moves;
-
+package ElementalCreatures;
+import java.io.*;
+import ElementalCreatures.Pokemon;
 public class Pokedex {
     static Pokemon[] pokedex = new Pokemon[151];
     static Moves[] allMoves = new Moves[165];
@@ -17,14 +10,14 @@ public class Pokedex {
         for (Pokemon item: pokedex){
             System.out.print(item.getName() + " " + item.getType1() + " " + item.getType2() + "\n");
         }
-        Moves.initializeMovesets("src\\res\\movedata.csv", allMoves);
-        Pokemon.setUpMoves("src\\res\\pokemonmoveset.csv", pokedex, allMoves);
-        Pokemon.setUpEvolution("src\\res\\evoline.csv", pokedex);
+        Moves.initializeMovesets("movedata.csv", allMoves);
+        Pokemon.setUpMoves("pokemonmoveset.csv", pokedex, allMoves);
+        Pokemon.setUpEvolution("evoline.csv", pokedex);
 
     }
     
     public static Pokemon[] initializePokedex(){
-        String file = "src\\res\\pokemonandtype.csv";
+        String file = "pokemonandtype.csv";
         BufferedReader reader = null;
         String line = "";
         try{
@@ -66,3 +59,4 @@ public class Pokedex {
         
 
     
+

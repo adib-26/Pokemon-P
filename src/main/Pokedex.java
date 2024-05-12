@@ -1,4 +1,13 @@
-import java.io.*;
+package main;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import entity.Pokemon;
+import lib.Moves;
+
 public class Pokedex {
     static Pokemon[] pokedex = new Pokemon[151];
     static Moves[] allMoves = new Moves[165];
@@ -79,3 +88,5 @@ public class Pokedex {
         }
 }
 }
+
+

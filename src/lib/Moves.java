@@ -1,5 +1,4 @@
-
-
+package lib;
 public class Moves {
     private String name;
     private int moveType, bp, pp, typing;
@@ -26,4 +25,3 @@ public class Moves {
 
     
 }
-

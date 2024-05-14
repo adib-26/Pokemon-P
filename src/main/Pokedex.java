@@ -9,8 +9,8 @@ import entity.Pokemon;
 import lib.Moves;
 
 public class Pokedex {
-    static Pokemon[] pokedex = new Pokemon[151];
-    static Moves[] allMoves = new Moves[165];
+    public static Pokemon[] pokedex = new Pokemon[151];
+    public static Moves[] allMoves = new Moves[165];
 
     public static void main(String[] args) throws IOException{
         initializePokedex();

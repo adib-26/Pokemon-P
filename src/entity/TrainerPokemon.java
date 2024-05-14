@@ -13,6 +13,7 @@ public class TrainerPokemon {
         this.setEXP(0);
         this.updateEXPMax();
         this.setStatus(status);
+        this.setHP(15+(level-5)*3);//some random values
         int i = 0;
         while(true){
             if (this.pokemon.getMovesets().peek().getLevel()<=this.lvl){

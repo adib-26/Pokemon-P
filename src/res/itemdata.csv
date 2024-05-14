@@ -1,19 +1,141 @@
-Poke Ball,1,0
-Antidote,0,0
-Burn Heal,0,1
-Ice Heal,0,2
-Awakening,0,3
-Parlyz Heal,0,4
-Full Restore,0,5
-Potion,0,20
-Super Potion,0,40
-Hyper Potion,0,60
-Max Potion,0,80
-Boulder Badge,3,0
-Cascade Badge,3,0
-Thunder Badge,3,0
-Rainbow Badge,3,0
-Soul Badge,3,0
-Marsh Badge,3,0
-Volcano Badge,3,0
-Earth Badge,3,0
+Poke Ball,1,0.2
+Great Ball,1,0.4
+Master Ball,1,1
+Ultra Ball,1,0.8
+Town Map,3,null
+Bicycle,3,
+Safari Ball,1,0.8
+Pokedex,3,null
+Moon Stone,2,4
+Antidote,0,S0
+Burn Heal,0,S1
+Ice Heal,0,S2
+Awakening,0,S3
+Parlyz Heal,0,S4
+Full Restore,0,F
+Max Potion,0,H
+Hyper Potion,0,H200
+Super Potion,0,H50
+Potion,0,H20
+Boulder Badge,3,null
+Cascade Badg,3,null
+Thunder Badge,3,null
+Rainbow Badge,3,null
+Soul Badge,3,null
+Marsh Badge,3,null
+Volcano Badge,3,null
+Earth Badge,3,null
+Escape Rope,5,null
+Repel,5,null
+Old Amber,4,null
+Fire Stone,2,null
+Thunderstone,2,null
+Water Stone,2,null
+HP Up,0,null
+Protein,4,null
+Iron,4,null
+Carbos,4,null
+Calcium,4,null
+Rare Candy,7,null
+Dome Fossil,3,null
+Helix Fossil,3,null
+Secret Key,3,null
+Bike Voucher,3,null
+X Accuracy,4,null
+Leaf Stone,2,null
+Card Key,3,null
+Nugget,7,null
+PP Up,0,null
+Poke Doll,4,null
+Full Heal,0,S
+Revive,0,R0.5
+Max Revive,0,R
+Guard Spec,4,null
+Super Repel,5,null
+Max Repel,5,null
+Dire Hit,4,null
+Coin,7,null
+Fresh Water,0,H50
+Soda Pop,0,H60
+Lemonade,0,H80
+S.S Ticket,3,null
+Gold Teeth,7,null
+X Attack,4,null
+X Defend,4,null
+X Speed,4,null
+X Special,4,null
+Coin Case,3,null
+Oak's Parcel,3,null
+Itemfinder,3,null
+Sliph Scope,3,null
+Poke Fluit,3,null
+Lift Key,3,null
+Exp All,7,null
+Old Rod,3,null
+Good Rod,3,null
+Super Rod,3,null
+PP Up,0,null
+Ether,0,P10
+Max Ether,0,E10
+Elixer,0,E10
+Max Elixer,0,E
+HM01,6,null
+HM02,6,null
+HM03,6,null
+HM04,6,null
+HM05,6,null
+TM01,6,null
+TM02,6,null
+TM03,6,null
+TM04,6,null
+TM05,6,null
+TM06,6,null
+TM07,6,null
+TM08,6,null
+TM09,6,null
+TM10,6,null
+TM11,6,null
+TM12,6,null
+TM13,6,null
+TM14,6,null
+TM15,6,null
+TM16,6,null
+TM17,6,null
+TM18,6,null
+TM19,6,null
+TM20,6,null
+TM21,6,null
+TM22,6,null
+TM23,6,null
+TM24,6,null
+TM25,6,null
+TM26,6,null
+TM27,6,null
+TM28,6,null
+TM29,6,null
+TM30,6,null
+TM31,6,null
+TM32,6,null
+TM33,6,null
+TM34,6,null
+TM35,6,null
+TM36,6,null
+TM37,6,null
+TM38,6,null
+TM39,6,null
+TM40,6,null
+TM41,6,null
+TM42,6,null
+TM43,6,null
+TM44,6,null
+TM45,6,null
+TM46,6,null
+TM47,6,null
+TM48,6,null
+TM49,6,null
+TM50,6,null
+TM51,6,null
+TM52,6,null
+TM53,6,null
+TM54,6,null
+TM55,6,null

@@ -1,5 +1,6 @@
 package entity;
 import lib.Moves;
+import lib.Item;
 public class TrainerPokemon {
     private Pokemon pokemon;
     private int hp, exp, expMax, lvl;
@@ -49,6 +50,40 @@ public class TrainerPokemon {
             this.exp -=this.expMax;
         }
     }
+
+    public void evolvePokemon(){
+        boolean canEvolve = false;
+        int i = 0;
+        while(i<this.pokemon.getEvolutions().size()){
+            if(this.pokemon.getEvolutions().get(i).getEvolutionType()==0){
+                if(this.pokemon.getEvolutions().get(i).getEvolutionCond()<=this.getLevel()){
+                    this.pokemon = this.pokemon.getEvolutions().get(i).getPokemon();
+                    canEvolve = true;
+                }
+            }
+            i++;
+        }
+        if(canEvolve){System.out.printf("\nYour Pokemon has evolved into a %s!", this.pokemon.getName());}
+        
+    }
+
+    public void evolvePokemon(Item evoItem){
+        boolean canEvolve = false;
+        int i = 0;
+        while(i<this.pokemon.getEvolutions().size()){
+            if(this.pokemon.getEvolutions().get(i).getEvolutionType()==1){
+                if(this.pokemon.getEvolutions().get(i).getEvolutionCond()==Integer.parseInt(evoItem.getItemCond())){
+                    this.pokemon = this.pokemon.getEvolutions().get(i).getPokemon();
+                    canEvolve = true;
+                }
+            }
+            i++;
+        }
+        if(canEvolve){System.out.printf("\nYour Pokemon has evolved into a %s!", this.pokemon.getName());}
+        
+    }
+
+
 
 }
 

@@ -1,5 +1,5 @@
 package lib;
-
+import entity.TrainerPokemon;
 public class Item{
     private int itemNo, owned, itemType;
     private String name, cond;
@@ -23,26 +23,63 @@ public class Item{
     public void setItemName(String n){this.name = n;}
     public void setItemCond(String c){this.cond = c;}
 
-    private void addItem(Item[] gameItems, int dex){
-        Item add = gameItems[dex];
-        add.owned+=1;
-    }
+    private void addItem(){this.owned+=1;}
 
-    public void addItem(Item[] gameItems, int dex, int n){
-        for(int i=0; i<n; i++){addItem(gameItems, dex);};
+    public void addItem(int n){
+        for(int i=0; i<n; i++){addItem();};
         String change = "";
-        if(dex>0){change=" gained ";}
+        if(n>0){change=" gained ";}
         else{change=" removed ";}
-        System.out.printf("\nYou %s %d %s!", change, n, gameItems[dex].getItemName());
+        System.out.printf("\nYou %s %d %s!", change, n, this.getItemName());
     }
 
-    public void removeItem(Item[] gameItems, int dex){
-        addItem(gameItems, -1);
+    public void removeItem(){
+        if(this.owned<0){
+            System.out.printf("\nYou don't have this item!");
+            return;}
+        addItem(-1);
     }
 
-    public void useItem(Item[] gameItems, int dex){
+    public void useItem(TrainerPokemon pokemon){
         // more to be added later
-        this.removeItem(gameItems, dex);
+        switch(this.itemType){
+            case 0:
+                this.useHealingItem(pokemon);
+                break;
+            case 2:
+                this.useEvoItem(pokemon);
+                break;
+            default:
+                System.out.printf("\nThis item cannot be used outside certain conditions.");
+                break;
+        }
+    }
+
+    public void useHealingItem(TrainerPokemon pokemon){
+        String condition = this.getItemCond();
+        if (condition.substring(0,1).compareTo("H")==0){
+            if(condition.equals("H")){pokemon.recoverHP(pokemon.getMaxHP()-pokemon.getCurrentHP());}
+            else{pokemon.recoverHP(Integer.parseInt(condition.substring(1, condition.length())));}
+            removeItem();
+        }
+        else if (condition.substring(0,1).compareTo("S")==0){
+            if(condition.equals("S")){
+                if(pokemon.getStatus()!=null){
+                    System.out.println("Pokemon isn't afflicted with any status!");
+                    return;
+                }
+                else{
+                    pokemon.setStatus("null");
+                    removeItem();
+                }
+            }
+        // more to be added afterwards;
+        // add pp to each move
+        // pokemon revival
+    }
+
+    public void useEvoItem(TrainerPokemon pokemon){
+
     }
 
 

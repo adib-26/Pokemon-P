@@ -3,8 +3,9 @@ import lib.Moves;
 import lib.Item;
 public class TrainerPokemon {
     private Pokemon pokemon;
-    private int hp, exp, expMax, lvl;
+    private int maxHP, currentHP, exp, maxEXP, lvl;
     private String status;
+    private boolean fainted;
     private Moves[] currentMovesets = new Moves[4];
 
     public TrainerPokemon(Pokemon[] pokedex, String name, int level, String status){
@@ -14,7 +15,8 @@ public class TrainerPokemon {
         this.setEXP(0);
         this.updateEXPMax();
         this.setStatus(status);
-        this.setHP(15+(level-5)*3);//some random values
+        this.setMaxHP(15+(level-5)*3);//some random values
+        this.currentHP = this.maxHP;
         int i = 0;
         while(true){
             if (this.pokemon.getMovesets().peek().getLevel()<=this.lvl){
@@ -27,29 +29,40 @@ public class TrainerPokemon {
 
 
 
-    public int getHP(){return this.hp;}
+    public int getMaxHP(){return this.maxHP;}
+    public int getCurrentHP(){return this.currentHP;}
     public int getEXP(){return this.exp;}
     public int getLevel(){return this.lvl;}
     public String getStatus(){return this.status;}
     public Moves[] getCurrentMoveset(){return this.currentMovesets;}
     public Pokemon getPokemon(){return this.pokemon;}
+    public boolean hasFainted(){return this.fainted;}
 
-    public void setHP(int hp){this.hp = hp;}
+    public void setMaxHP(int hp){this.maxHP = hp;}
     public void setEXP(int exp){this.exp = exp;}
     public void setLevel(int level){this.lvl = level;}
     public void setStatus(String status){this.status = status;}
     public void setPokemon(Pokemon pokemon){this.pokemon = pokemon;}
+    public void recoverHP(int hp){
+        if(this.currentHP + hp > this.maxHP){
+            this.recoverHP(this.maxHP-this.currentHP);
+            return;
+        }
+        this.currentHP += hp;
+    }
     public void updateEXPMax(){
-        if(this.lvl<=10){this.expMax = 100;}
-        else if(this.lvl<=30){this.expMax = 200;}
-        else{this.expMax = 300;}
+        if(this.lvl<=10){this.maxEXP = 100;}
+        else if(this.lvl<=30){this.maxEXP = 200;}
+        else{this.maxEXP = 300;}
     }
     public void updateLevel(){
-        if(this.exp>=this.expMax){
+        if(this.exp>=this.maxEXP){
             this.lvl += 1;
-            this.exp -=this.expMax;
+            this.exp -=this.maxEXP;
         }
     }
+
+    public void checkHasFainted(){if (this.currentHP ==0){this.fainted = true;}}
 
     public void evolvePokemon(){
         boolean canEvolve = false;

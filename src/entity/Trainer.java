@@ -49,6 +49,8 @@ public class Trainer {
         pokemonTeam.add(newMember);
     }
 
+    public ArrayList<TrainerPokemon> getAllPokemon(){return this.pokemonTeam;}
+
     public boolean addBadges(String badges) {
         if(badgesIsFull()) {
             System.out.println("You have collected all badges. Rematch with a gym leader won't give additional badges");

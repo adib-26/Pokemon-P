@@ -62,7 +62,10 @@ public class TrainerPokemon {
         }
     }
 
-    public void checkHasFainted(){if (this.currentHP ==0){this.fainted = true;}}
+    public void checkHasFainted(){
+        if (this.currentHP ==0){this.fainted = true;}
+        if(this.currentHP !=0){this.fainted = false;}
+    }
 
     public void evolvePokemon(){
         boolean canEvolve = false;
@@ -98,5 +101,9 @@ public class TrainerPokemon {
 
 
 
+
+
 }
+
+
 

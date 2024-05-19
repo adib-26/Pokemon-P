@@ -22,7 +22,7 @@ public class Pokedex {
         Pokemon.setUpEvolution("src\\res\\evoline.csv", pokedex);
 
     }
-    
+
     public static Pokemon[] initializePokedex(){
         String file = "src\\res\\pokemonandtype.csv";
         BufferedReader reader = null;
@@ -38,31 +38,31 @@ public class Pokedex {
                 }
                 String[] row = line.split(",");
                 pokedex[i] = new Pokemon();
-                
+
                 pokedex[i].setName(row[0]);
-                
+
                 pokedex[i].setType1(Integer.parseInt(row[1]));
-                
+
                 pokedex[i].setType2(Integer.parseInt(row[2]));
                 System.out.print("\n");
                 i++;
             }
-            
+
         } catch (FileNotFoundException e){e.printStackTrace();}
         catch (IOException e){e.printStackTrace();}
         finally{try {
             reader.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-}
-    return pokedex;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        }
+        return pokedex;
     }
 
-  
+
 
 } 
 
-        
 
-    
+
+

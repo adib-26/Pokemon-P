@@ -99,6 +99,16 @@ public class TrainerPokemon {
         
     }
 
+    public void showDetails(){
+        System.out.printf("Pokemon: %s \nLevel: %d \nCurrent EXP: %d \nEXP needed to level up: %d", this.getPokemon().getName(), this.getLevel(), this.getEXP(), this.maxEXP-this.getEXP());
+        System.out.printf("\nCurrent Movesets: ");
+        for (int i=0; currentMovesets[i]!=null; i++){
+            System.out.printf("\n-%s          %d  %d", currentMovesets[i].getName(), currentMovesets[i].getBP(), currentMovesets[i].getPP());
+        }
+        System.out.printf("\nCurrent Status: %s ", this.getStatus());
+        this.getPokemon().showTypingDetails();
+    }
+
 
 
 

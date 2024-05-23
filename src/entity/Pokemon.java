@@ -5,6 +5,7 @@ package entity;
  */
 
 
+import java.util.ArrayList;
 /**
  *
  * @author User
@@ -15,6 +16,7 @@ import java.util.PriorityQueue;
 import lib.Moves;
 import lib.Evolution;
 import lib.LearnableMoves;
+import main.Pokedex;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -48,6 +50,26 @@ public class Pokemon {
     public void setName(String n){this.name = n;}
     public void setType1(int type){this.type1 = type;}
     public void setType2(int type){this.type2 = type;}
+    public void showTypingDetails(){
+        System.out.printf("\nThis Pokemon is Weak against: \n");
+        for (int i=0; i<Pokedex.typeWeakness.get(this.type1).size(); i++){System.out.print(Pokedex.typeName.get(Pokedex.typeWeakness.get(type1).get(i)) + ", ");}
+        if (this.type2!=0){for(int i=0; i<Pokedex.typeWeakness.get(this.type2).size(); i++){System.out.print(Pokedex.typeName.get(Pokedex.typeWeakness.get(type2).get(i)) + ", ");}}
+        System.out.printf("\nThis Pokemon is Strong against: \n");
+        for(int i=0; i<Pokedex.typeStrength.get(this.type1).size(); i++){System.out.print(Pokedex.typeName.get(Pokedex.typeStrength.get(type1).get(i)) + ", ");}
+        if(this.type2!=0){for(int i=0;i<Pokedex.typeStrength.get(this.type2).size(); i++){System.out.print(Pokedex.typeName.get(Pokedex.typeStrength.get(type2).get(i)) + ", ");}}
+    }
+    public ArrayList<Integer> getTypeWeakness(){
+        ArrayList<Integer> typeWeakness = new ArrayList<>();
+        for (int one: Pokedex.typeWeakness.get(this.type1)){typeWeakness.add(one);}
+        for (int two: Pokedex.typeWeakness.get(this.type2)){typeWeakness.add(two);}
+        return typeWeakness;
+    }
+    public ArrayList<Integer> getTypeAdvantage(){
+        ArrayList<Integer> typeAdvantage = new ArrayList<>();
+        for (int one: Pokedex.typeStrength.get(this.type1)){typeAdvantage.add(one);}
+        for (int two: Pokedex.typeStrength.get(this.type2)){typeAdvantage.add(two);}
+        return typeAdvantage;
+    }
     public LinkedList<Evolution> getEvolutions(){return this.evolution;}
     public PriorityQueue<LearnableMoves> getMovesets(){return this.movesets;}
     

@@ -28,7 +28,20 @@ public class Pokedex {
         Pokemon.setUpMoves("src\\res\\pokemonmoveset.csv", pokedex, allMoves);
         Pokemon.setUpEvolution("src\\res\\evoline.csv", pokedex);
         setUpTypeMapping("src\\res\\typingdata.csv");
-        
+
+        for(int i=1; i<19; i++){
+            System.out.printf("\nType %s is Weak against: \n", typeName.get(i));
+            for(int w: typeWeakness.get(i)){System.out.print(typeName.get(w) + ", ");}
+            System.out.printf("\nType %s is Strong against: \n", typeName.get(i));
+            for(int s: typeStrength.get(i)){System.out.print(typeName.get(s) + ", ");}
+        }
+
+        for(int p=0; p<31; p++){
+            System.out.print("\n");
+            System.out.print(pokedex[p].getName());
+            pokedex[p].showTypingDetails();
+        }
+
 
     }
     

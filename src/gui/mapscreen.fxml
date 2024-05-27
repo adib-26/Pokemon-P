@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.gui.mapScreen">
+   <children>
+      <ImageView fitHeight="794.0" fitWidth="952.0" layoutX="151.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/Map.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="PalletButton" layoutX="155.0" layoutY="568.0" mnemonicParsing="false" onAction="#onPallet" prefHeight="58.0" prefWidth="106.0" style="-fx-background-color: #FFFFFF;" text="PALLET TOWN&#10;     (START)&#10;">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ViridianButton" layoutX="151.0" layoutY="388.0" mnemonicParsing="false" onAction="#onViridian" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF;" text="VIRIDIAN CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="PewterButton" layoutX="151.0" layoutY="144.0" mnemonicParsing="false" onAction="#onPewter" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF;" text="PEWTER CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="CeladonButton" layoutX="553.0" layoutY="270.0" mnemonicParsing="false" onAction="#onCeladon" prefHeight="30.0" prefWidth="125.0" style="-fx-background-color: #FFFFFF;" text="CELADON CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="SaffronButton" layoutX="736.0" layoutY="261.0" mnemonicParsing="false" onAction="#onSaffron" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF;" text="SAFFRON CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="CeruleanButton" layoutX="736.0" layoutY="96.0" mnemonicParsing="false" onAction="#onCerulean" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #FFFFFF;" text="CERULEAN CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="FushiaButton" layoutX="627.0" layoutY="635.0" mnemonicParsing="false" onAction="#onFushia" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #FFFFFF;" text="FUSHIA CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="CinnabarButton" layoutX="151.0" layoutY="755.0" mnemonicParsing="false" onAction="#onCinnabar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF;" text="CINNABAR ISLAND">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="VermillionButton" layoutX="727.0" layoutY="448.0" mnemonicParsing="false" onAction="#onVermillion" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF;" text="VERMILLION CITY">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="LavenderButton" layoutX="960.0" layoutY="276.0" mnemonicParsing="false" onAction="#onLavender" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #FFFFFF;" text="LAVENDER TOWN">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="67.0" fitWidth="61.0" layoutX="165.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Image/pokemonPlayer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="exitButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onExit" prefHeight="30.0" prefWidth="29.0" style="-fx-background-color: #FF0000;" text="X" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

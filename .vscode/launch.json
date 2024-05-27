@@ -1,0 +1,80 @@
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "app",
+            "request": "launch",
+            "mainClass": "main.app",
+            "projectName": "Pokemon-P_47d6cb72",
+            "vmArgs": "--module-path \"C:/TestJavafx/openjfx-22.0.1_windows-x64_bin-sdk/javafx-sdk-22.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+
+    },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Pokemon-P_47d6cb72",
+            
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Pokedex",
+            "request": "launch",
+            "mainClass": "ElementalCreatures.Pokedex",
+            "projectName": "Pokemon-P_47d6cb72"
+        },
+        {
+            "type": "java",
+            "name": "ItemDex",
+            "request": "launch",
+            "mainClass": "Items.ItemDex",
+            "projectName": "Pokemon-P_47d6cb72"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Pokemon-P_47d6cb72",
+           
+        },
+        {
+            "type": "java",
+            "name": "PokemonMaze",
+            "request": "launch",
+            "mainClass": "PokemonMaze",
+            "projectName": "Pokemon-P_47d6cb72"
+        },
+        {
+            "type": "java",
+            "name": "GameItems",
+            "request": "launch",
+            "mainClass": "main.GameItems",
+            "projectName": "Pokemon-P_47d6cb72"
+        },
+        {
+            "type": "java",
+            "name": "Pokedex(1)",
+            "request": "launch",
+            "mainClass": "main.Pokedex",
+            "projectName": "Pokemon-P_47d6cb72"
+        },
+    {
+    "type": "java",
+    "name": "HelloApplication",
+    "request": "launch",
+    "mainClass": "HelloApplication",
+    "projectName": "Pokemon-P_47d6cb72",
+    "vmArgs": "--module-path \"C:/TestJavafx/openjfx-22.0.1_windows-x64_bin-sdk/javafx-sdk-22.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+    }
+
+    ]
+}

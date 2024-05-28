@@ -1,20 +1,47 @@
-package graph;
+package kanto;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Helper {
+import graph.Djikstra;
+import graph.Edge;
+import graph.Graph;
 
-    public Helper() {
-        Graph graph = new Graph(initMap());
-        Djikstra djikstra = new Djikstra();
-        List<String> vert = initVert();
+public class RivalRace {
+
+    public static boolean doneRace = false;
+
+    Graph graph;
+    Djikstra djikstra;
+    List<String> vert;
+    boolean isRacing;
+    String targetDest;
+
+    public RivalRace() {
+        graph = new Graph(initMap());
+        djikstra = new Djikstra();
+        vert = initVert();
+        isRacing = false;
+        targetDest = "";
+    }
+
+    public void startRivalRace() {
+        this.isRacing = true;
         String randDest = djikstra.chooseRandomDestination(vert);
+        this.targetDest = randDest;
         String outcomePath = Djikstra.findShortestPath("Saffron City", randDest,  vert, graph);
-        System.out.println("Shortest path: " + outcomePath);
+        System.out.println("The battle has begun! Your rival Gary has challenge you to a race to " + randDest);
+        System.out.println("\nShortest path: " + outcomePath);
+        System.out.println("Goodluck on your race!");
+    }
 
-        Graph.printGraph(graph);
+    public void checkWin(String currLoc) {
+        if(currLoc.equals(this.targetDest)) {
+            System.out.println("Congratulations! You won the race!");
+            this.isRacing = false;
+            doneRace = true;
+        }
     }
 
     public List<String> initVert() {
@@ -46,5 +73,13 @@ public class Helper {
                 new Edge(9, 8, 7), new Edge(9, 2, 5) 
                 );
         return edges;
+    }
+
+    public String getTargetDest() {
+        return targetDest;
+    }
+
+    public boolean isRacing() {
+        return isRacing;
     }
 }

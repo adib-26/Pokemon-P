@@ -42,7 +42,7 @@ public class Trainer {
             System.out.println("You can only carry 6 pokemon at a time");
             return;
         }
-        pokemonTeam.addLast(pokemonName);
+        pokemonTeam.add(pokemonName);
     }
 
     public boolean addBadges(String badges) {
@@ -80,7 +80,7 @@ public class Trainer {
     }
 
     public void displayBadges() {
-        System.out.println("Pokemon: " + badges.toString());
+        System.out.println("Badges: " + badges.toString());
     }
 
 }

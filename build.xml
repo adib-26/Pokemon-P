@@ -1,0 +1,19 @@
+<project name="Path Of Champions" basedir=".">
+
+    <target name="compile">
+        <javac srcdir="src" destdir="build/classes" includeantruntime="true">
+            <classpath>
+                </classpath>
+        </javac>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="main.Main" fork="true">
+            <classpath>
+                <pathelement location="build/classes"/>
+                </classpath>
+        </java>
+    </target>
+
+</project>
+

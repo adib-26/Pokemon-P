@@ -49,14 +49,13 @@ public class Djikstra {
                 visited.add(visiting);
             }
 
-            /*System.out.println("Min weight: " + minWeight);
-            System.out.println("Unvisited: " + unvisited.toString());
-            System.out.println("Visited: " + visited.toString());
+            //System.out.println("Min weight: " + minWeight);
+            //System.out.println("Unvisited: " + unvisited.toString());
+            //System.out.println("Visited: " + visited.toString());
 
-            System.out.println(djikstra.shortestPath.toString());
-            System.out.println(djikstra.previousVert.toString());
-            System.out.println();
-            */
+            //System.out.println(djikstra.shortestPath.toString());
+            //System.out.println(djikstra.previousVert.toString());
+            //System.out.println();
             int nextVisitIndex = djikstra.shortestPath.indexOf(minWeight);
             String visitedSameItem = vert.get(nextVisitIndex);
             if(visited.contains(visitedSameItem)) {
@@ -93,7 +92,7 @@ public class Djikstra {
 
     public String chooseRandomDestination(List<String> vert) {
         Random random = new Random();
-        int randIndex = random.nextInt(vert.size());
+        int randIndex = random.nextInt(1, vert.size());
         return vert.get(randIndex);
     }
 

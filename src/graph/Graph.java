@@ -32,6 +32,18 @@ public class Graph {
         return maxNum + 1;
     }
 
+    public int[] getNeighbors(int from) {
+        List<Vertex> curr = adjList.get(from);
+        int[] neighborsIndex = new int[curr.size()];
+        int index = 0;
+        for(Vertex node: curr) {
+            int dest = node.value;
+            neighborsIndex[index] = dest;
+            index++;
+        }
+        return neighborsIndex;
+    }
+
     public int getNodeCount() {
         return nodeCount;
     }

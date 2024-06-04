@@ -1,4 +1,4 @@
-package Pokemazr.src.A;
+package pokemaze;
 
 import java.util.*;
 
@@ -69,7 +69,7 @@ public class PokemonMaze {
         scanner.close();
     }
 
-    public static void main(String[] args) {
+    public void startMaze() {
         char[][] maze = {
                 "##########".toCharArray(),
                 "#P...#...#".toCharArray(),
@@ -85,5 +85,6 @@ public class PokemonMaze {
 
         PokemonMaze game = new PokemonMaze(maze);
         game.play();
+
     }
 }

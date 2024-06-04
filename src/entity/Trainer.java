@@ -1,9 +1,7 @@
 package entity;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
-import main.Pokedex;
 
 public class Trainer {
     String name;
@@ -86,7 +84,7 @@ public class Trainer {
     }
 
     public void displayBadges() {
-        System.out.println("Pokemon: " + badges.toString());
+        System.out.println("Badges: " + badges.toString());
     }
 
 }

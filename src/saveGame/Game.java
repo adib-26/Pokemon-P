@@ -32,8 +32,7 @@ public class Game {
 		}
 	}
 
-	// Example usage
-	public static void main(String[] args) {
+    public void exampleUsage() {
 		Game game = new Game();
 		GameState initialGameState = new GameState();
 		initialGameState.coordinateX = 10;
@@ -53,5 +52,5 @@ public class Game {
 			System.out.println("Score: " + loadedGameState.score);
 			//System.out.println("Powers: " + String.join(", ", loadedGameState.powersCurrentlyTheUserHas));
 		}
-	}
+    }
 }

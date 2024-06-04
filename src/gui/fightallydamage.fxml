@@ -16,13 +16,13 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000c3" height="237.0" layoutY="563.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="1286.0" />
-      <Label fx:id="pokemonName" alignment="CENTER" layoutX="195.0" layoutY="588.0" onKeyPressed="#changeText" prefHeight="186.0" prefWidth="1070.0" text="YOU DEAL 20 DAMAGE TO THE ENEMY&#10;" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="pokemonName" alignment="CENTER" layoutX="107.0" layoutY="588.0" onKeyPressed="#changeText" prefHeight="186.0" prefWidth="1070.0" text="YOU DEAL 20 DAMAGE TO THE ENEMY&#10;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Agency FB" size="64.0" />
          </font>
       </Label>
       <ProgressBar layoutX="31.0" layoutY="73.0" prefHeight="47.0" prefWidth="407.0" progress="1.0" />
-      <Label fx:id="enemyName" blendMode="MULTIPLY" layoutX="31.0" layoutY="20.0" prefHeight="56.0" prefWidth="200.0" text="BULBASAUR">
+      <Label fx:id="enemyPokemon" blendMode="MULTIPLY" layoutX="31.0" layoutY="20.0" prefHeight="56.0" prefWidth="200.0" text="BULBASAUR">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
@@ -33,17 +33,22 @@
          </font>
       </Label>
       <ProgressBar layoutX="800.0" layoutY="431.0" prefHeight="47.0" prefWidth="407.0" progress="1.0" />
-      <Label fx:id="lvlName" layoutX="1109.0" layoutY="374.0" prefHeight="50.0" prefWidth="98.0" text="LVL : 5" textFill="RED">
+      <Label fx:id="allyLvl" layoutX="1109.0" layoutY="374.0" prefHeight="50.0" prefWidth="98.0" text="LVL : 5" textFill="RED">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Label fx:id="allyName" blendMode="MULTIPLY" layoutX="800.0" layoutY="368.0" prefHeight="56.0" prefWidth="200.0" text="PIKACHU">
+      <Label fx:id="allyPokemon" blendMode="MULTIPLY" layoutX="800.0" layoutY="368.0" prefHeight="56.0" prefWidth="200.0" text="PIKACHU">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Label fx:id="hpName" layoutX="1053.0" layoutY="487.0" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
+      <Label fx:id="allyHp" layoutX="1054.0" layoutY="492.0" onKeyPressed="#setAllyHp" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
+         <font>
+            <Font name="Agency FB" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyHP" layoutX="283.0" layoutY="120.0" onKeyPressed="#setEnemyHP" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
          <font>
             <Font name="Agency FB" size="42.0" />
          </font>

@@ -1,5 +1,6 @@
 package src.gui;
 
+import PokemonBattle.battleMechanism;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,25 +13,26 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+
 public class battleScreen extends playerInfo{
 
     @FXML
-    private Label allyName;
+    private Label allyHP;
+
+    @FXML
+    private Label allyLvl;
+
+    @FXML
+    private Label allyPokemon;
+
+    @FXML
+    private Label enemyHP;
 
     @FXML
     private Label enemyLvl;
 
     @FXML
-    private Label enemyName;
-
-    @FXML
-    private Label hpName;
-
-    @FXML
-    private Label lvlName;
-
-    @FXML
-    private Label pokemonName;
+    private Label enemyPokemon;
 
     @FXML
     private Button fightButton;
@@ -40,6 +42,11 @@ public class battleScreen extends playerInfo{
     private Stage stage;
     private Parent root;
 
+    battleMechanism bm = new battleMechanism();
+
+    public void setStage(Stage stage){
+        this.stage = stage;
+    }
     @FXML
     void onBag(ActionEvent event)throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("bagoptionscreen.fxml"));
@@ -58,8 +65,6 @@ public class battleScreen extends playerInfo{
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     @FXML
@@ -86,5 +91,15 @@ public class battleScreen extends playerInfo{
     }
     void changeBackground(Image b){
         background.setImage(b);
+    }
+
+    public void setAllyHP(){
+        allyHP.setText(bm.updateAllyHP() + "/" + bm.initialallyHP());
+    }
+    public void setEnemyHP(){
+        enemyHP.setText(bm.updateEnemyHP() + "/" + bm.initialenemyHP());
+    }
+    public void setAllyLvl(){
+        allyLvl.setText("LVL : " + bm.initialallyLvl());
     }
 }

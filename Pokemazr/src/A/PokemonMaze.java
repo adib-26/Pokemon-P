@@ -1,3 +1,5 @@
+package Pokemazr.src.A;
+
 import java.util.*;
 
 public class PokemonMaze {

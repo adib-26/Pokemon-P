@@ -17,18 +17,18 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000c3" height="237.0" layoutY="563.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="1286.0" />
-      <Label fx:id="pokemonName" layoutX="57.0" layoutY="578.0" prefHeight="186.0" prefWidth="474.0" text="You deal 20 damage &#10;to the enemy" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="pokemonName" layoutX="154.0" layoutY="577.0" prefHeight="186.0" prefWidth="320.0" text="What will &#10;Pikachu do?" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="Agency FB" size="64.0" />
+            <Font name="Agency FB" size="75.0" />
          </font>
       </Label>
-      <Button fx:id="fightButton" layoutX="619.0" layoutY="571.0" mnemonicParsing="false" onAction="#onFight" prefHeight="99.0" prefWidth="260.0" text="TACKLE" textFill="RED">
+      <Button fx:id="skill1" layoutX="619.0" layoutY="569.0" mnemonicParsing="false" onAction="#onSkill1" prefHeight="50.0" prefWidth="526.0" text="TACKLE" textFill="RED">
          <font>
             <Font name="Agency FB" size="35.0" />
          </font>
       </Button>
       <ProgressBar layoutX="31.0" layoutY="73.0" prefHeight="47.0" prefWidth="407.0" progress="1.0" />
-      <Label fx:id="enemyName" blendMode="MULTIPLY" layoutX="31.0" layoutY="20.0" prefHeight="56.0" prefWidth="200.0" text="BULBASAUR">
+      <Label fx:id="enemyPokemon" blendMode="MULTIPLY" layoutX="31.0" layoutY="20.0" prefHeight="56.0" prefWidth="200.0" text="BULBASAUR">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
@@ -38,33 +38,33 @@
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Button layoutX="948.0" layoutY="571.0" mnemonicParsing="false" onAction="#onBag" prefHeight="99.0" prefWidth="260.0" text="BAG" textAlignment="CENTER" textFill="#a19d24">
-         <font>
-            <Font name="Agency FB" size="54.0" />
-         </font>
-      </Button>
-      <Button layoutX="619.0" layoutY="682.0" mnemonicParsing="false" onAction="#onPokemon" prefHeight="99.0" prefWidth="260.0" text="ELECTRIC SHOCK" textFill="#0e9617">
+      <Button fx:id="skill2" layoutX="619.0" layoutY="645.0" mnemonicParsing="false" onAction="#onSkill2" prefHeight="47.0" prefWidth="526.0" text="ELECTRIC SHOCK" textFill="#0e9617">
          <font>
             <Font name="Agency FB" size="35.0" />
          </font>
       </Button>
-      <Button layoutX="948.0" layoutY="682.0" mnemonicParsing="false" onAction="#onRun" prefHeight="99.0" prefWidth="260.0" text="RUN" textFill="#0009ff">
+      <Button fx:id="cancel" layoutX="619.0" layoutY="719.0" mnemonicParsing="false" onAction="#onCancel" prefHeight="34.0" prefWidth="526.0" text="CANCEL" textFill="#0009ff">
          <font>
-            <Font name="Agency FB" size="54.0" />
+            <Font name="Agency FB" size="35.0" />
          </font>
       </Button>
       <ProgressBar layoutX="800.0" layoutY="431.0" prefHeight="47.0" prefWidth="407.0" progress="1.0" />
-      <Label fx:id="lvlName" layoutX="1109.0" layoutY="374.0" prefHeight="50.0" prefWidth="98.0" text="LVL : 5" textFill="RED">
+      <Label fx:id="allyLvl" layoutX="1109.0" layoutY="374.0" prefHeight="50.0" prefWidth="98.0" text="LVL : 5" textFill="RED">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Label fx:id="allyName" blendMode="MULTIPLY" layoutX="800.0" layoutY="368.0" prefHeight="56.0" prefWidth="200.0" text="PIKACHU">
+      <Label fx:id="allyPokemon" blendMode="MULTIPLY" layoutX="800.0" layoutY="368.0" prefHeight="56.0" prefWidth="200.0" text="PIKACHU">
          <font>
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Label fx:id="hpName" layoutX="1053.0" layoutY="487.0" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
+      <Label fx:id="allyHP" layoutX="1053.0" layoutY="487.0" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
+         <font>
+            <Font name="Agency FB" size="42.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyHP" layoutX="285.0" layoutY="120.0" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
          <font>
             <Font name="Agency FB" size="42.0" />
          </font>

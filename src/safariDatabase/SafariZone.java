@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package pokemonGame;
+package safariDatabase;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -29,7 +29,7 @@ public class SafariZone {
     }
 
     public void readFile() {
-        String file = "src\\gen01.csv";
+        String file = "res/gen01.csv";
         String line = "";
 //        for (int i = 0; i < pokemonList.length; i++) {
 //            addPokemon(pokemonList[i]);

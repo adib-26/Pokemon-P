@@ -1,13 +1,16 @@
 package entity;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import main.Pokedex;
 
 public class Trainer {
     String name;
     String currentLocation;
-    List<String> pokemonTeam;
+    ArrayList<TrainerPokemon> pokemonTeam;
     List<String> badges;
+    
 
     public Trainer(String name) {
         this.name = name;
@@ -23,27 +26,30 @@ public class Trainer {
         this.badges = new ArrayList<>();
     }
 
-    public Trainer(String name, String currentLocation, List<String> pokemonTeam) {
+    public Trainer(String name, String currentLocation, ArrayList<TrainerPokemon> pokemonTeam) {
         this.name = name;
         this.currentLocation = currentLocation;
         this.pokemonTeam = pokemonTeam;
         this.badges = new ArrayList<>();
     }
 
-    public Trainer(String name, String currentLocation, List<String> pokemonTeam, List<String> badges) {
+    public Trainer(String name, String currentLocation, ArrayList<TrainerPokemon> pokemonTeam, List<String> badges) {
         this.name = name;
         this.currentLocation = currentLocation;
         this.pokemonTeam = pokemonTeam;
         this.badges = badges;
     }
 
-    public void addPokemon(String pokemonName) {
+    public void addPokemon(Pokemon pokemon, int level, String status) {
         if(partyIsFull()) {
             System.out.println("You can only carry 6 pokemon at a time");
             return;
         }
-        pokemonTeam.addLast(pokemonName);
+        TrainerPokemon newMember = new TrainerPokemon(main.Pokedex.pokedex, pokemon.getName(), level, status);
+        pokemonTeam.add(newMember);
     }
+
+    public ArrayList<TrainerPokemon> getAllPokemon(){return this.pokemonTeam;}
 
     public boolean addBadges(String badges) {
         if(badgesIsFull()) {

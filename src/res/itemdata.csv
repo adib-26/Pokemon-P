@@ -1,5 +1,5 @@
 Poke Ball,1,0.2
-Great Ball,1,0.4
+Great Ball,1,0.5
 Master Ball,1,1
 Ultra Ball,1,0.8
 Town Map,3,TBA
@@ -28,9 +28,9 @@ Earth Badge,3,TBA
 Escape Rope,5,TBA
 Repel,5,TBA
 Old Amber,4,TBA
-Fire Stone,2,TBA
-Thunderstone,2,TBA
-Water Stone,2,TBA
+Fire Stone,2,0
+Thunderstone,2,2
+Water Stone,2,1
 HP Up,0,TBA
 Protein,4,TBA
 Iron,4,TBA
@@ -76,66 +76,61 @@ Good Rod,3,TBA
 Super Rod,3,TBA
 PP Up,0,TBA
 Ether,0,P10
-Max Ether,0,E10
+Max Ether,0,P
 Elixer,0,E10
 Max Elixer,0,E
-HM01,6,TBA
-HM02,6,TBA
-HM03,6,TBA
-HM04,6,TBA
-HM05,6,TBA
-TM01,6,TBA
-TM02,6,TBA
-TM03,6,TBA
-TM04,6,TBA
-TM05,6,TBA
-TM06,6,TBA
-TM07,6,TBA
-TM08,6,TBA
-TM09,6,TBA
-TM10,6,TBA
-TM11,6,TBA
-TM12,6,TBA
-TM13,6,TBA
-TM14,6,TBA
-TM15,6,TBA
-TM16,6,TBA
-TM17,6,TBA
-TM18,6,TBA
-TM19,6,TBA
-TM20,6,TBA
-TM21,6,TBA
-TM22,6,TBA
-TM23,6,TBA
-TM24,6,TBA
-TM25,6,TBA
-TM26,6,TBA
-TM27,6,TBA
-TM28,6,TBA
-TM29,6,TBA
-TM30,6,TBA
-TM31,6,TBA
-TM32,6,TBA
-TM33,6,TBA
-TM34,6,TBA
-TM35,6,TBA
-TM36,6,TBA
-TM37,6,TBA
-TM38,6,TBA
-TM39,6,TBA
-TM40,6,TBA
-TM41,6,TBA
-TM42,6,TBA
-TM43,6,TBA
-TM44,6,TBA
-TM45,6,TBA
-TM46,6,TBA
-TM47,6,TBA
-TM48,6,TBA
-TM49,6,TBA
-TM50,6,TBA
-TM51,6,TBA
-TM52,6,TBA
-TM53,6,TBA
-TM54,6,TBA
-TM55,6,TBA
+HM01,6,Cut
+HM02,6,Fly
+HM03,6,Surf
+HM04,6,Strength
+HM05,6,Flash
+TM01,6,Mega Punch
+TM02,6,Razor Wind
+TM03,6,Swords Dance
+TM04,6,Whirlwind
+TM05,6,Mega Kick
+TM06,6,Toxic
+TM07,6,Horn Drill
+TM08,6,Body Slam
+TM09,6,Take Down
+TM10,6,Double Edge
+TM11,6,Bubble Beam
+TM12,6,Water Gun
+TM13,6,Ice Beam
+TM14,6,Blizzard
+TM15,6,Hyper Beam
+TM16,6,Pay Day
+TM17,6,Submission
+TM18,6,Counter
+TM19,6,Seismic Toss
+TM20,6,Rage
+TM21,6,Mega Drain
+TM22,6,Solar Beam
+TM23,6,Dragon Rage
+TM24,6,Thunderbolt
+TM25,6,Thunder
+TM26,6,Earthquake
+TM27,6,Fissure
+TM28,6,Dig
+TM29,6,Psychic
+TM30,6,Teleport
+TM31,6,Mimic
+TM32,6,Double Team
+TM33,6,Reflect
+TM34,6,Bide
+TM35,6,Bide
+TM36,6,Self Destruct
+TM37,6,Egg Bomb
+TM38,6,Fire Blast
+TM39,6,Swift
+TM40,6,Skull Bash
+TM41,6,Soft-Boiled
+TM42,6,Dream Eater
+TM43,6,Sky Attack
+TM44,6,Rest
+TM45,6,Thunder Wave
+TM46,6,Psywave
+TM47,6,Explosion
+TM48,6,Rock Slide
+TM49,6,Tri Attack
+TM50,6,Substitute

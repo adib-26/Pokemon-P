@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 
 public class GameItems {
-    static Item[] gameItems = new Item[141];
+    public static Item[] gameItems = new Item[136];
     public static void main(String[] args){
         BufferedReader reader = null;
         int i = 0;

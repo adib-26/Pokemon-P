@@ -84,7 +84,7 @@ public class Trainer {
     }
 
     public void displayBadges() {
-        System.out.println("Pokemon: " + badges.toString());
+        System.out.println("Badges: " + badges.toString());
     }
 
 }

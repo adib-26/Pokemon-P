@@ -2,11 +2,10 @@ package main;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedHashMap;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 import entity.Pokemon;
 import lib.Moves;
@@ -17,17 +16,25 @@ public class Pokedex {
     public static LinkedHashMap<Integer, String> typeName = new LinkedHashMap<>();
     public static LinkedHashMap<Integer, ArrayList<Integer>>typeWeakness = new LinkedHashMap<>();
     public static LinkedHashMap<Integer, ArrayList<Integer>> typeStrength = new LinkedHashMap<>();
+    public static final String path = "res/";
 
+    public Pokedex() {
+        try {
+            initEverything();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    public static void main(String[] args) throws IOException{
+    public void initEverything() throws IOException {
         initializePokedex();
         for (Pokemon item: pokedex){
             System.out.print(item.getName() + " " + item.getType1() + " " + item.getType2() + "\n");
         }
-        Moves.initializeMovesets("src\\res\\movedata.csv", allMoves);
-        Pokemon.setUpMoves("src\\res\\pokemonmoveset.csv", pokedex, allMoves);
-        Pokemon.setUpEvolution("src\\res\\evoline.csv", pokedex);
-        setUpTypeMapping("src\\res\\typingdata.csv");
+        Moves.initializeMovesets(path+"movedata.csv", allMoves);
+        Pokemon.setUpMoves(path+"pokemonmoveset.csv", pokedex, allMoves);
+        Pokemon.setUpEvolution(path+"evoline.csv", pokedex);
+        setUpTypeMapping(path+"typingdata.csv");
 
         for(int i=1; i<19; i++){
             System.out.printf("\nType %s is Weak against: \n", typeName.get(i));
@@ -41,12 +48,10 @@ public class Pokedex {
             System.out.print(pokedex[p].getName());
             pokedex[p].showTypingDetails();
         }
-
-
     }
     
     public static Pokemon[] initializePokedex(){
-        String file = "src\\res\\pokemonandtype.csv";
+        String file = path+"pokemonandtype.csv";
         BufferedReader reader = null;
         String line = "";
         try{

@@ -1,4 +1,4 @@
-package kanto;
+package src.kanto;
 
 import java.io.BufferedReader;
 import java.io.File;

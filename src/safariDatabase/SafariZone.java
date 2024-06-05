@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package safariDatabase;
+package src.safariDatabase;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

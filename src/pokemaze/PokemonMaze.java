@@ -1,4 +1,4 @@
-package pokemaze;
+package src.pokemaze;
 
 import java.util.*;
 

@@ -13,25 +13,25 @@ import java.io.IOException;
 public class bagAllyDamage {
 
     @FXML
-    private Label allyName;
+    private Label alllyPokemon;
+
+    @FXML
+    private Label allyHP;
+
+    @FXML
+    private Label allyLvl;
 
     @FXML
     private Label battleText;
 
     @FXML
+    private Label enemyHP;
+
+    @FXML
     private Label enemyLvl;
 
     @FXML
-    private Label enemyName;
-
-    @FXML
-    private Label hpName;
-
-    @FXML
-    private Label hpName1;
-
-    @FXML
-    private Label lvlName;
+    private Label enemyPokemon;
     private Stage stage;
     private Parent root;
     private Scene scene;

@@ -1,4 +1,4 @@
-package entity;
+package src.entity;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-import lib.Moves;
-import lib.Evolution;
-import lib.LearnableMoves;
-import main.Pokedex;
+import src.lib.Moves;
+import src.lib.Evolution;
+import src.lib.LearnableMoves;
+import src.main.Pokedex;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -108,6 +108,7 @@ public class Pokemon {
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
             while((line=reader.readLine())!=null){
                 line = line.replace("\"", "");
+
                 String[] row = line.split(",");
                 for (int j=0; j<row.length/3; j++){
                     if(row[0].equals("null")){break;}

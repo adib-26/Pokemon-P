@@ -1,7 +1,7 @@
-package lib;
+package src.lib;
 
 import java.util.ArrayList;
-import main.GameItems;
+import src.main.GameItems;
 public class Pokemart {
     ArrayList<Item> soldItem = new ArrayList<>();
 

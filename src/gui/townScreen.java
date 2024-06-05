@@ -21,7 +21,11 @@ public class townScreen extends playerInfo{
     private Stage stage;
     private Parent root;
 
-    //final Image image = new Image((getClass().getResourceAsStream("gymImage.png")));
+    // Image image = new Image((getClass().getResourceAsStream("gymImage.png")));
+
+    public void setStage(Stage stage){
+        this.stage = stage;
+    }
 
     public void setTownName(String name){
     townName.setText(name);
@@ -44,7 +48,10 @@ public class townScreen extends playerInfo{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("battlescreen.fxml"));
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-       // battleScreen bs = loader.getController();
+        battleScreen bs = loader.getController();
+        bs.setInitialEnemyHP();
+        bs.setInitialAllyHP();
+
         //bs.changeBackground(image);
         scene = new Scene(root);
         stage.setScene(scene);
@@ -60,7 +67,102 @@ public class townScreen extends playerInfo{
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         mapScreen ms = loader.getController();
-        ms.setButtonViridian(true);
+        switch(this.getLocation()){
+            case "PALLET TOWN":
+                ms.setButtonPallet(false);
+                ms.setButtonPewter(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonSaffron(false);
+                ms.setButtonLavender(false);
+                ms.setButtonVermiilion(false);
+                ms.setButtonFushia(false);
+                break;
+            case "VIRIDIAN CITY":
+                ms.setButtonViridian(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonSaffron(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonLavender(false);
+                ms.setButtonVermiilion(false);
+                ms.setButtonFushia(false);
+                break;
+            case "PEWTER CITY":
+                ms.setButtonPallet(false);
+                ms.setButtonPewter(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonSaffron(false);
+                ms.setButtonLavender(false);
+                ms.setButtonVermiilion(false);
+                ms.setButtonFushia(false);
+                ms.setButtonCinnabar(false);
+                break;
+            case "CERULEAN CITY":
+                ms.setButtonPallet(false);
+                ms.setButtonViridian(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonCerulean(false);;
+                ms.setButtonCeladon(false);
+                ms.setButtonFushia(false);
+                ms.setButtonVermiilion(false);
+                break;
+            case "SAFFRON CITY":
+                ms.setButtonPallet(false);
+                ms.setButtonPewter(false);
+                ms.setButtonSaffron(false);
+                ms.setButtonFushia(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                break;
+            case "LAVENDER TOWN":
+                ms.setButtonPallet(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonLavender(false);
+                break;
+            case "CELADON CITY":
+                ms.setButtonCeladon(false);
+                ms.setButtonVermiilion(false);
+                ms.setButtonLavender(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonPallet(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                break;
+            case "VERMILLION CITY":
+                ms.setButtonVermiilion(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonPallet(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                break;
+            case "FUSHIA CITY":
+                ms.setButtonFushia(false);
+                ms.setButtonPallet(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonSaffron(false);
+                break;
+            case "CINNABAR ISLAND":
+                ms.setButtonCinnabar(false);
+                ms.setButtonViridian(false);
+                ms.setButtonPewter(false);
+                ms.setButtonCerulean(false);
+                ms.setButtonCeladon(false);
+                ms.setButtonCinnabar(false);
+                ms.setButtonLavender(false);
+                ms.setButtonSaffron(false);
+                ms.setButtonVermiilion(false);
+                break;
+        }
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

@@ -10,22 +10,22 @@ import javafx.stage.*;
 public class pokemonAllyDamage {
 
     @FXML
-    private Label allyName;
+    private Label allyHP;
+
+    @FXML
+    private Label allyLvl;
+
+    @FXML
+    private Label allyPokemon;
+
+    @FXML
+    private Label enemyHP;
 
     @FXML
     private Label enemyLvl;
 
     @FXML
-    private Label enemyName;
-
-    @FXML
-    private Label hpName;
-
-    @FXML
-    private Label hpName1;
-
-    @FXML
-    private Label lvlName;
+    private Label enemyPokemon;
 
     @FXML
     private Label pokemonChange;

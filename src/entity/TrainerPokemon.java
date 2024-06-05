@@ -1,6 +1,6 @@
-package entity;
-import lib.Moves;
-import lib.Item;
+package src.entity;
+import src.lib.Moves;
+import src.lib.Item;
 public class TrainerPokemon {
     private Pokemon pokemon;
     private int maxHP, currentHP, exp, maxEXP, lvl;

@@ -1,6 +1,6 @@
-package lib;
-import entity.Trainer;
-import entity.TrainerPokemon;
+package src.lib;
+import src.entity.Trainer;
+import src.entity.TrainerPokemon;
 
 public class Town {
     private String name;

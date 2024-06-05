@@ -1,11 +1,11 @@
-package main;
+package src.main;
 
 import java.util.Scanner;
 
-import entity.Trainer;
-import kanto.KantoData;
-import kanto.KantoMap;
-import kanto.RivalRace;
+import src.entity.Trainer;
+import src.kanto.KantoData;
+import src.kanto.KantoMap;
+import src.kanto.RivalRace;
 
 public class Main {
     public static void main(String[] args) {

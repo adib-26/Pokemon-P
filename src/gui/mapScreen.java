@@ -73,9 +73,7 @@ public class mapScreen extends playerInfo{
     void setButtonLavender(Boolean state){
         LavenderButton.setVisible(state);
     }
-    void setButtonPallet(Boolean state){
-        PalletButton.setVisible(state);
-    }
+    void setButtonPallet(Boolean state){PalletButton.setVisible(state);}
     void setButtonPewter(Boolean state){
         PewterButton.setVisible(state);
     }

@@ -1,6 +1,6 @@
-package lib;
+package src.lib;
 import java.util.LinkedList;
-import entity.*;
+import src.entity.*;
 public class Evolution {
     private Pokemon pokemon;
     private int evoType, cond;

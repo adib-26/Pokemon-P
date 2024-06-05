@@ -1,8 +1,8 @@
-package lib;
+package src.lib;
 import java.util.Scanner;
-import entity.Pokemon;
-import entity.Trainer;
-import entity.TrainerPokemon;
+import src.entity.Pokemon;
+import src.entity.Trainer;
+import src.entity.TrainerPokemon;
 
 public class Item{
     static Scanner sc = new Scanner(System.in);

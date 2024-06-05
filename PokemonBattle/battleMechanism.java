@@ -3,14 +3,12 @@ package PokemonBattle;
 import java.util.Random;
 public class battleMechanism {
 
-    private int allyHP,enemyHP,allyAttk,enemyAttk;
+    private static int allyHP,enemyHP,allyAttk,enemyAttk;
     private String allyType,enemyType;
 
-    private int allyCount = 1, enemyCount = 1;
+    private static int allyCount = 1, enemyCount = 1;
     private int initialallyHP = 40,initialenemyHP = 40, initialallyLvl = 5;
     public battleMechanism(){
-        allyHP = 40;
-        enemyHP = 40;
     }
 
     public static void main(String[] args) {
@@ -39,6 +37,9 @@ public class battleMechanism {
     public void setEnemyType(String enemyType){
         this.enemyType = enemyType;
     }
+    public int getAllyHP(){
+        return allyHP;
+    }
 
     public int updateAllyDmg(){
         if(allyType.equals("Grass") && (enemyType.equals("Water")||enemyType.equals("Rock")||enemyType.equals("Ground"))){
@@ -57,12 +58,22 @@ public class battleMechanism {
             } else {
                 allyHP -= enemyAttk;
             }
-
+            if(allyHP<=0 || enemyHP<=0) {
+                allyCount = 1;
+                enemyCount = 1;
+            }
+            //setTempAllyHP(allyHP);
         return allyHP;
     }
 
     public int setEnemyDmg(){
         return enemyAttk = new Random().nextInt(10);
+    }
+    public void setTempEnemyHP(int enemyHP){
+       this.enemyHP = enemyHP;
+    }
+    public int getEnemyHP(){
+        return enemyHP;
     }
     public int updateEnemyDmg(){
         if(allyType.equals("Grass") && (enemyType.equals("Water")||enemyType.equals("Rock")||enemyType.equals("Ground"))){
@@ -75,13 +86,17 @@ public class battleMechanism {
     }
 
     public int updateEnemyHP(){
+        System.out.println(enemyCount);
+        System.out.println(enemyHP);
         if(enemyCount == 1){
             enemyHP = initialenemyHP - allyAttk;
             enemyCount = 2;
         }
         else
         enemyHP -= allyAttk;
-
+        if(enemyHP<=0)
+            enemyCount = 1;
+        setTempEnemyHP(enemyHP);
         return enemyHP;
     }
 }

@@ -1,4 +1,4 @@
-package graph;
+package src.graph;
 
 public class Edge {
     int src, dest, weight;

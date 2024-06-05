@@ -1,11 +1,11 @@
-package main;
+package src.main;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import lib.Item;
+import src.lib.Item;
 
 public class GameItems {
     public static Item[] gameItems = new Item[136];

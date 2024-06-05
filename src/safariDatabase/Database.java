@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pokemonGame;
+package src.safariDatabase;
 
-import entity.Pokemon;
+import src.entity.Pokemon;
 import java.sql.*;
 import java.util.Arrays;
 import java.util.List;

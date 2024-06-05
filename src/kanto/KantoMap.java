@@ -1,11 +1,11 @@
-package kanto;
+package src.kanto;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import graph.Edge;
-import graph.Graph;
+import src.graph.Edge;
+import src.graph.Graph;
 
 public class KantoMap {
 

@@ -11,20 +11,31 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.scene.*;
+import PokemonBattle.battleMechanism;
 
 public class bagOptionScreen {
 
+
     @FXML
-    private Label allyName;
+    private Label allyHP;
+
+    @FXML
+    private Label allyLvl;
+
+    @FXML
+    private Label allyPokemon;
+
+    @FXML
+    private Button cancel;
+
+    @FXML
+    private Label enemyHP;
 
     @FXML
     private Label enemyLvl;
 
     @FXML
-    private Label enemyName;
-
-    @FXML
-    private Label hpName;
+    private Label enmeyPokemon;
 
     @FXML
     private Button item1;
@@ -35,20 +46,15 @@ public class bagOptionScreen {
     @FXML
     private Button item3;
 
-    @FXML
-    private Button item4;
-
-    @FXML
-    private Label lvlName;
-
-    @FXML
-    private Label pokemonName1;
-
     private Stage stage;
     private Scene scene;
     private Parent root;
     private int count = 1;
+    battleMechanism bm = new battleMechanism();
 
+    public void setStage(Stage stage){
+        this.stage = stage;
+    }
     @FXML
     void onItem1(ActionEvent event) {
 
@@ -98,13 +104,34 @@ public class bagOptionScreen {
     }
 
     @FXML
-    void onItem4(ActionEvent event)throws Exception {
+    void onCancel(ActionEvent event)throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("battlescreen.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         root = loader.load();
+        battleScreen bs = loader.getController();
+        bs.setInitialAllyHP();
+        bs.setInitialEnemyHP();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
+    public void setInitialAllyHP(){
+        allyHP.setText("HP : " + bm.initialallyHP() + "/" + bm.initialallyHP());
+    }
+
+    public void setAllyHP(){
+        allyHP.setText("HP : " + bm.getAllyHP() + "/" + bm.initialallyHP());
+    }
+    public void setInitialEnemyHP(){
+        enemyHP.setText("HP : " + bm.initialenemyHP() + "/" + bm.initialenemyHP());
+    }
+
+    public void setEnemyHP(){
+        enemyHP.setText("HP : " + bm.getEnemyHP() + "/" + bm.initialenemyHP());
+    }
+    public void setAllyLvl(){
+        allyLvl.setText("LVL : " + bm.initialallyLvl());
+    }
+
 
 }

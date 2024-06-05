@@ -43,7 +43,7 @@
             <Font name="Agency FB" size="41.0" />
          </font>
       </Label>
-      <Label fx:id="allyHp" layoutX="1054.0" layoutY="492.0" onKeyPressed="#setAllyHp" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
+      <Label fx:id="allyHp" layoutX="1048.0" layoutY="478.0" onKeyPressed="#setAllyHp" prefHeight="52.0" prefWidth="175.0" text="HP : 25/25" textFill="#1121ff">
          <font>
             <Font name="Agency FB" size="42.0" />
          </font>

@@ -1,14 +1,13 @@
-package entity;
+package src.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Trainer {
-    String name;
-    String currentLocation;
-    ArrayList<TrainerPokemon> pokemonTeam;
-    List<String> badges;
-    
+    static String name;
+    static String currentLocation;
+    static ArrayList<TrainerPokemon> pokemonTeam;
+    static List<String> badges;
 
     public Trainer(String name) {
         this.name = name;
@@ -43,7 +42,7 @@ public class Trainer {
             System.out.println("You can only carry 6 pokemon at a time");
             return;
         }
-        TrainerPokemon newMember = new TrainerPokemon(main.Pokedex.pokedex, pokemon.getName(), level, status);
+        TrainerPokemon newMember = new TrainerPokemon(src.main.Pokedex.pokedex, pokemon.getName(), level, status);
         pokemonTeam.add(newMember);
     }
 
